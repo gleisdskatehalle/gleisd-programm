@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gleis D – Wochenprogramm</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <style>
+    :root {
+      --blue: #0B004C;
+      --red: #FB2629;
+      --cream: #FFF2EA;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e9e9e9;
+      font-family: "Uni Sans", Arial, sans-serif;
+      color: var(--blue);
+    }
+
+    .page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 12px 50px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    .download {
+      flex: 1;
+      border: 0;
+      border-radius: 12px;
+      background: var(--red);
+      color: white;
+      padding: 15px;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .download:disabled {
+      opacity: .5;
+      cursor: wait;
+    }
+
+    .message {
+      font-size: 13px;
+      line-height: 1.4;
+      margin: 0 0 12px;
+    }
+
+    .preview {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      background: var(--cream);
+      border-radius: 4px;
+    }
+
+    /*
+      Die eigentliche Grafik hat immer 1080 x 1920.
+      Auf Mobilgeräten wird sie nur optisch verkleinert.
+    */
+
+    #poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      transform-origin: top left;
+      background: var(--cream);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 88px 75px 78px;
+    }
+
+    .poster-header {
+      flex: 0 0 auto;
+      padding-bottom: 35px;
+      border-bottom: 5px solid var(--blue);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand-name {
+      font-size: 83px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -2px;
+      color: var(--red);
+    }
+
+    .brand-label {
+      font-size: 25px;
+      font-weight: 700;
+      text-align: right;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    .headline {
+      margin: 42px 0 12px;
+      font-size: 77px;
+      line-height: 1.05;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1.5px;
+    }
+
+    .week-range {
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    .program-area {
+      flex: 1 1 auto;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+    }
+
+    .program-inner {
+      width: 100%;
+      transform-origin: top left;
+    }
+
+    .date-group {
+      display: grid;
+      grid-template-columns: 155px minmax(0, 1fr);
+      border-top: 2px solid var(--blue);
+      padding: 21px 0 22px;
+      gap: 12px;
+      break-inside: avoid;
+    }
+
+    .date-group:last-child {
+      border-bottom: 2px solid var(--blue);
+    }
+
+    .date-label {
+      font-size: 29px;
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .date-items {
+      min-width: 0;
+    }
+
+    .program-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 15px;
+      padding: 0 0 16px;
+    }
+
+    .program-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .program-title {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.15;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .program-time {
+      font-size: 26px;
+      line-height: 1.3;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .program-note {
+      font-size: 23px;
+      line-height: 1.3;
+      margin-top: 6px;
+      overflow-wrap: anywhere;
+    }
+
+    .program-link {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 7px;
+      color: var(--red);
+    }
+
+    .status {
+      display: inline-block;
+      vertical-align: middle;
+      border: 2px solid var(--blue);
+      border-radius: 50px;
+      padding: 5px 10px;
+      margin-top: 8px;
+      font-size: 19px;
+      line-height: 1.1;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .status.cancelled {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
+    .empty-day {
+      font-size: 24px;
+      opacity: .6;
+    }
+
+    .poster-footer {
+      flex: 0 0 auto;
+      padding-top: 24px;
+      border-top: 5px solid var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-title {
+      font-size: 35px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .footer-subtitle {
+      margin-top: 5px;
+      font-size: 23px;
+    }
+
+    .footer-url {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--red);
+      white-space: nowrap;
+    }
+
+    .loading {
+      padding: 30px 0;
+      font-size: 28px;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding-top: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+    <div class="toolbar">
+      <button class="download" id="download" disabled>
+        Programm wird geladen …
+      </button>
+    </div>
+
+    <p class="message" id="message">
+      Aktuelle Kalenderwoche, Montag bis Sonntag.
+    </p>
+
+    <div class="preview" id="preview">
+      <div id="poster">
+
+        <header class="poster-header">
+          <div class="brand">
+            <div class="brand-name">GLEIS D</div>
+            <div class="brand-label">
+              SKATEHALLE<br>HANNOVER
+            </div>
+          </div>
+
+          <h1 class="headline">Wochenprogramm</h1>
+          <div class="week-range" id="week-range"></div>
+        </header>
+
+        <section class="program-area" id="program-area">
+          <div class="program-inner" id="program-inner">
+            <div class="loading">Programm wird geladen …</div>
+          </div>
+        </section>
+
+        <footer class="poster-footer">
+          <div>
+            <div class="footer-title">Mehr Infos & Anmeldung</div>
+            <div class="footer-subtitle">
+              Alle Angebote und aktuelle Änderungen
+            </div>
+          </div>
+          <div class="footer-url">gleis-d.de</div>
+        </footer>
+
+      </div>
+    </div>
+  </main>
+
+<script>
+(async function () {
+  const DATA_URL =
+    'https://andy413o.github.io/gleisd-programm/data/programm.json';
+
+  // Auf true setzen, wenn bei Einträgen mit URL
+  // ein Anmeldehinweis angezeigt werden soll.
+  const SHOW_LINK_HINT = true;
+
+  // Auch Tage ohne Programmpunkte anzeigen?
+  const SHOW_EMPTY_DAYS = true;
+
+  const poster = document.getElementById('poster');
+  const preview = document.getElementById('preview');
+  const area = document.getElementById('program-area');
+  const inner = document.getElementById('program-inner');
+  const button = document.getElementById('download');
+  const message = document.getElementById('message');
+
+  let ready = false;
+  let rendering = false;
+
+  const weekdays = [
+    'So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'
+  ];
+
+  function localDate(date) {
+    return [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, '0'),
+      String(date.getDate()).padStart(2, '0')
+    ].join('-');
+  }
+
+  function parseDate(value) {
+    const [year, month, day] = value.split('-').map(Number);
+    return new Date(year, month - 1, day, 12);
+  }
+
+  function addDays(date, days) {
+    const result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  }
+
+  function getCurrentWeek() {
+    const now = new Date();
+    const monday = new Date(
+      now.getFullYear(), now.getMonth(), now.getDate(), 12
+    );
+
+    const offset = (monday.getDay() + 6) % 7;
+    monday.setDate(monday.getDate() - offset);
+
+    return {
+      monday,
+      sunday: addDays(monday, 6),
+      start: localDate(monday),
+      end: localDate(addDays(monday, 6))
+    };
+  }
+
+  function formatFullDate(date) {
+    return new Intl.DateTimeFormat('de-DE', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    }).format(date);
+  }
+
+  function formatDay(value) {
+    const date = parseDate(value);
+    return weekdays[date.getDay()] + ' ' +
+      String(date.getDate()).padStart(2, '0') + '.' +
+      String(date.getMonth() + 1).padStart(2, '0') + '.';
+  }
+
+  function escapeHTML(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function safeURL(value) {
+    if (!value) return '';
+
+    try {
+      const url = new URL(value, window.location.href);
+      return ['http:', 'https:'].includes(url.protocol)
+        ? url.href
+        : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function renderItem(item) {
+    const statusValue = String(item.status || '').trim();
+    const cancelled = statusValue.toLowerCase() === 'fällt aus';
+
+    const status =
+      statusValue && statusValue.toLowerCase() !== 'aktiv'
+        ? `<span class="status ${cancelled ? 'cancelled' : ''}">
+            ${escapeHTML(statusValue)}
+          </span>`
+        : '';
+
+    const note = item.note
+      ? `<div class="program-note">${escapeHTML(item.note)}</div>`
+      : '';
+
+    const time = item.start
+      ? item.end
+        ? `${item.start} – ${item.end}`
+        : item.start
+      : '';
+
+    const link = SHOW_LINK_HINT && safeURL(item.url)
+      ? `<div class="program-link">Infos: gleis-d.de</div>`
+      : '';
+
+    return `
+      <article class="program-item">
+        <div>
+          <h2 class="program-title">
+            ${escapeHTML(item.title || '')}
+          </h2>
+          ${status}
+          ${note}
+          ${link}
+        </div>
+        <div class="program-time">${escapeHTML(time)}</div>
+      </article>
+    `;
+  }
+
+  function renderWeek(items, week) {
+    const groups = new Map();
+
+    for (let i = 0; i < 7; i++) {
+      groups.set(localDate(addDays(week.monday, i)), []);
+    }
+
+    for (const item of items) {
+      if (groups.has(item.date)) {
+        groups.get(item.date).push(item);
+      }
+    }
+
+    const html = Array.from(groups, ([date, dayItems]) => {
+      if (!SHOW_EMPTY_DAYS && !dayItems.length) return '';
+
+      return `
+        <section class="date-group">
+          <div class="date-label">${escapeHTML(formatDay(date))}</div>
+          <div class="date-items">
+            ${dayItems.length
+              ? dayItems.map(renderItem).join('')
+              : '<div class="empty-day">Keine Termine</div>'
+            }
+          </div>
+        </section>
+      `;
+    }).join('');
+
+    inner.innerHTML = html ||
+      '<div class="loading">Keine Programmpunkte vorhanden.</div>';
+  }
+
+  function resizePreview() {
+    const scale = preview.clientWidth / 1080;
+    poster.style.transform = `scale(${scale})`;
+  }
+
+  /*
+    Passt bei langen Wochen den Inhalt an die
+    verfügbare Fläche an, ohne Termine abzuschneiden.
+  */
+  function fitProgram() {
+    inner.style.transform = 'none';
+    inner.style.width = '100%';
+
+    const availableHeight = area.clientHeight;
+    const contentHeight = inner.scrollHeight;
+
+    if (!availableHeight || !contentHeight) return;
+
+    const scale = Math.min(1, availableHeight / contentHeight);
+
+    if (scale < 1) {
+      inner.style.width = `${100 / scale}%`;
+      inner.style.transform = `scale(${scale})`;
+    }
+
+    // Nach der Breitenänderung können Texte anders umbrechen.
+    // Deshalb nochmals prüfen.
+    const newHeight = inner.scrollHeight;
+    const finalScale = Math.min(
+      scale,
+      availableHeight / newHeight
+    );
+
+    if (finalScale < scale) {
+      inner.style.width = `${100 / finalScale}%`;
+      inner.style.transform = `scale(${finalScale})`;
+    }
+  }
+
+  async function downloadPNG() {
+    if (!ready || rendering) return;
+
+    rendering = true;
+    button.disabled = true;
+    button.textContent = 'PNG wird erstellt …';
+
+    try {
+      if (typeof html2canvas !== 'function') {
+        throw new Error('Bildexport-Bibliothek nicht geladen');
+      }
+
+      await document.fonts.ready;
+
+      // Temporär die Verkleinerung der Mobilvorschau entfernen.
+      poster.style.transform = 'none';
+
+      const canvas = await html2canvas(poster, {
+        backgroundColor: '#FFF2EA',
+        width: 1080,
+        height: 1920,
+        scale: 1,
+        useCORS: true,
+        logging: false,
+        scrollX: 0,
+        scrollY: 0
+      });
+
+      const week = getCurrentWeek();
+      const filename = `gleis-d-programm-${week.start}.png`;
+
+      const blob = await new Promise(resolve =>
+        canvas.toBlob(resolve, 'image/png')
+      );
+
+      if (!blob) throw new Error('PNG konnte nicht erstellt werden');
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+
+      message.textContent =
+        'Instagram-Story erstellt: 1080 × 1920 Pixel.';
+
+    } catch (error) {
+      console.error(error);
+      message.textContent =
+        'Der PNG-Export hat nicht funktioniert. Bitte erneut versuchen.';
+    } finally {
+      resizePreview();
+      rendering = false;
+      button.disabled = false;
+      button.textContent = 'Instagram-Story herunterladen';
+    }
+  }
+
+  try {
+    const week = getCurrentWeek();
+
+    document.getElementById('week-range').textContent =
+      `${formatFullDate(week.monday)} – ${formatFullDate(week.sunday)}`;
+
+    const response = await fetch(DATA_URL, { cache: 'no-store' });
+
+    if (!response.ok) {
+      throw new Error('Programmdaten konnten nicht geladen werden');
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.allItems)) {
+      throw new Error('Unerwartetes Datenformat');
+    }
+
+    const items = data.allItems
+      .filter(item =>
+        item &&
+        String(item.status || '').trim().toLowerCase() !== 'ausblenden' &&
+        /^\d{4}-\d{2}-\d{2}$/.test(item.date) &&
+        item.date >= week.start &&
+        item.date <= week.end
+      )
+      .sort((a, b) =>
+        a.date.localeCompare(b.date) ||
+        String(a.start || '').localeCompare(String(b.start || ''))
+      );
+
+    renderWeek(items, week);
+
+    await document.fonts.ready;
+    fitProgram();
+    resizePreview();
+
+    ready = true;
+    button.disabled = false;
+    button.textContent = 'Instagram-Story herunterladen';
+
+    message.textContent =
+      `Aktuelle Woche: ${week.start} bis ${week.end}, ` +
+      `${items.length} Programmpunkte.`;
+
+  } catch (error) {
+    console.error(error);
+
+    inner.innerHTML =
+      '<div class="loading">Das Programm konnte nicht geladen werden.</div>';
+
+    message.textContent =
+      'Fehler beim Laden der Programmdaten.';
+
+    resizePreview();
+  }
+
+  window.addEventListener('resize', () => {
+    if (!rendering) resizePreview();
+  });
+
+  button.addEventListener('click', downloadPNG);
+})();
+</script>
+
+</body>
+</html>
