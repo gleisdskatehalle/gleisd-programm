@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-17T13:57:48+02:00",
+  "generatedAt": "2026-10-17T14:24:09+02:00",
   "timezone": "Europe/Berlin",
   "categories": [
     "Öffnungszeiten",
-    "Session",
-    "Workshop",
+    "Sessions",
+    "Workshops",
     "Kinder",
-    "Event"
+    "Events"
   ],
   "statuses": [
     "aktiv",
@@ -15,13 +15,11 @@
     "geändert"
   ],
   "sourceSheets": [
-    "Events",
     "Kids Session",
     "Mitternachtssport",
     "Öffnungszeiten",
     "Schnupperrollen",
-    "Session",
-    "Workshops"
+    "Session"
   ],
   "todayItems": [
     {
@@ -30,7 +28,7 @@
       "endsAt": "2026-10-17T22:00:00+02:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -41,7 +39,45 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 30
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T18:00:00+02:00",
+      "endsAt": "2026-10-17T21:00:00+02:00",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "Skate Only",
+      "status": "aktiv",
+      "category": "Sessions",
+      "categories": [
+        "Sessions"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "",
+      "url": "https://www.gleis-d.de/programm",
+      "sourceSheet": "Session",
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T20:00:00+02:00",
+      "endsAt": "2026-10-18T00:00:00+02:00",
+      "start": "20:00",
+      "end": "24:00",
+      "title": "Mitternachtssport",
+      "status": "fällt aus",
+      "category": "Sessions",
+      "categories": [
+        "Sessions"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "Eintritt & Verleih gratis!",
+      "url": "https://www.gleis-d.de/programm",
+      "sourceSheet": "Mitternachtssport",
+      "sourceRow": 8
     }
   ],
   "currentItems": [
@@ -51,7 +87,7 @@
       "endsAt": "2026-10-17T22:00:00+02:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -62,11 +98,51 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 30
+      "sourceRow": 7
     }
   ],
   "upcomingHighlights": [],
-  "cancelledItems": [],
+  "cancelledItems": [
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T16:00:00+02:00",
+      "endsAt": "2026-10-17T17:30:00+02:00",
+      "start": "16:00",
+      "end": "17:30",
+      "title": "Schnupperrollen",
+      "status": "geändert",
+      "category": "Sessions",
+      "categories": [
+        "Sessions",
+        "Kinder"
+      ],
+      "statusRelevant": false,
+      "highlight": false,
+      "note": "Anmeldung nötig",
+      "url": "https://www.gleis-d.de/schnupperrollen",
+      "sourceSheet": "Schnupperrollen",
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T20:00:00+02:00",
+      "endsAt": "2026-10-18T00:00:00+02:00",
+      "start": "20:00",
+      "end": "24:00",
+      "title": "Mitternachtssport",
+      "status": "fällt aus",
+      "category": "Sessions",
+      "categories": [
+        "Sessions"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "Eintritt & Verleih gratis!",
+      "url": "https://www.gleis-d.de/programm",
+      "sourceSheet": "Mitternachtssport",
+      "sourceRow": 8
+    }
+  ],
   "allItems": [
     {
       "date": "2026-10-17",
@@ -74,7 +150,7 @@
       "endsAt": "2026-10-17T22:00:00+02:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -85,7 +161,65 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 30
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T16:00:00+02:00",
+      "endsAt": "2026-10-17T17:30:00+02:00",
+      "start": "16:00",
+      "end": "17:30",
+      "title": "Schnupperrollen",
+      "status": "geändert",
+      "category": "Sessions",
+      "categories": [
+        "Sessions",
+        "Kinder"
+      ],
+      "statusRelevant": false,
+      "highlight": false,
+      "note": "Anmeldung nötig",
+      "url": "https://www.gleis-d.de/schnupperrollen",
+      "sourceSheet": "Schnupperrollen",
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T18:00:00+02:00",
+      "endsAt": "2026-10-17T21:00:00+02:00",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "Skate Only",
+      "status": "aktiv",
+      "category": "Sessions",
+      "categories": [
+        "Sessions"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "",
+      "url": "https://www.gleis-d.de/programm",
+      "sourceSheet": "Session",
+      "sourceRow": 7
+    },
+    {
+      "date": "2026-10-17",
+      "startsAt": "2026-10-17T20:00:00+02:00",
+      "endsAt": "2026-10-18T00:00:00+02:00",
+      "start": "20:00",
+      "end": "24:00",
+      "title": "Mitternachtssport",
+      "status": "fällt aus",
+      "category": "Sessions",
+      "categories": [
+        "Sessions"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "Eintritt & Verleih gratis!",
+      "url": "https://www.gleis-d.de/programm",
+      "sourceSheet": "Mitternachtssport",
+      "sourceRow": 8
     },
     {
       "date": "2026-10-18",
@@ -95,9 +229,9 @@
       "end": "11:00",
       "title": "Kids Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": true,
@@ -105,7 +239,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Kids Session",
-      "sourceRow": 11
+      "sourceRow": 7
     },
     {
       "date": "2026-10-18",
@@ -113,7 +247,7 @@
       "endsAt": "2026-10-18T21:00:00+02:00",
       "start": "13:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -124,27 +258,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 31
-    },
-    {
-      "date": "2026-10-19",
-      "startsAt": "2026-10-19T16:00:00+02:00",
-      "endsAt": "2026-10-19T17:30:00+02:00",
-      "start": "16:00",
-      "end": "17:30",
-      "title": "Schnupperrollen",
-      "status": "aktiv",
-      "category": "Session",
-      "categories": [
-        "Session",
-        "Kinder"
-      ],
-      "statusRelevant": false,
-      "highlight": false,
-      "note": "Anmeldung nötig",
-      "url": "https://www.gleis-d.de/schnupperrollen",
-      "sourceSheet": "Schnupperrollen",
-      "sourceRow": 16
+      "sourceRow": 8
     },
     {
       "date": "2026-10-20",
@@ -152,7 +266,7 @@
       "endsAt": "2026-10-20T21:00:00+02:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -163,7 +277,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 32
+      "sourceRow": 9
     },
     {
       "date": "2026-10-21",
@@ -171,7 +285,7 @@
       "endsAt": "2026-10-21T21:00:00+02:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -182,26 +296,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 33
-    },
-    {
-      "date": "2026-10-22",
-      "startsAt": "2026-10-22T18:00:00+02:00",
-      "endsAt": "2026-10-22T21:00:00+02:00",
-      "start": "18:00",
-      "end": "21:00",
-      "title": "Skate Only",
-      "status": "aktiv",
-      "category": "Session",
-      "categories": [
-        "Session"
-      ],
-      "statusRelevant": true,
-      "highlight": false,
-      "note": "",
-      "url": "https://www.gleis-d.de/programm",
-      "sourceSheet": "Session",
-      "sourceRow": 23
+      "sourceRow": 10
     },
     {
       "date": "2026-10-23",
@@ -209,7 +304,7 @@
       "endsAt": "2026-10-23T18:00:00+02:00",
       "start": "15:00",
       "end": "18:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -220,7 +315,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 34
+      "sourceRow": 11
     },
     {
       "date": "2026-10-23",
@@ -230,16 +325,16 @@
       "end": "22:00",
       "title": "Ü16 Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 24
+      "sourceRow": 8
     },
     {
       "date": "2026-10-24",
@@ -247,7 +342,7 @@
       "endsAt": "2026-10-24T22:00:00+02:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -258,7 +353,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 35
+      "sourceRow": 12
     },
     {
       "date": "2026-10-25",
@@ -266,7 +361,7 @@
       "endsAt": "2026-10-25T21:00:00+01:00",
       "start": "13:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -277,7 +372,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 36
+      "sourceRow": 13
     },
     {
       "date": "2026-10-26",
@@ -287,9 +382,9 @@
       "end": "17:30",
       "title": "Schnupperrollen",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": false,
@@ -297,7 +392,7 @@
       "note": "Anmeldung nötig",
       "url": "https://www.gleis-d.de/schnupperrollen",
       "sourceSheet": "Schnupperrollen",
-      "sourceRow": 17
+      "sourceRow": 8
     },
     {
       "date": "2026-10-27",
@@ -305,7 +400,7 @@
       "endsAt": "2026-10-27T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -316,7 +411,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 37
+      "sourceRow": 14
     },
     {
       "date": "2026-10-28",
@@ -324,7 +419,7 @@
       "endsAt": "2026-10-28T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -335,7 +430,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 38
+      "sourceRow": 15
     },
     {
       "date": "2026-10-29",
@@ -345,16 +440,16 @@
       "end": "21:00",
       "title": "Blades Only",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 25
+      "sourceRow": 9
     },
     {
       "date": "2026-10-30",
@@ -362,7 +457,7 @@
       "endsAt": "2026-10-30T18:00:00+01:00",
       "start": "15:00",
       "end": "18:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -373,7 +468,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 39
+      "sourceRow": 16
     },
     {
       "date": "2026-10-30",
@@ -383,16 +478,16 @@
       "end": "22:00",
       "title": "Ü16 Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 26
+      "sourceRow": 10
     },
     {
       "date": "2026-10-31",
@@ -400,7 +495,7 @@
       "endsAt": "2026-10-31T22:00:00+01:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -411,7 +506,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 40
+      "sourceRow": 17
     },
     {
       "date": "2026-11-01",
@@ -421,9 +516,9 @@
       "end": "11:00",
       "title": "Kids Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": true,
@@ -431,7 +526,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Kids Session",
-      "sourceRow": 12
+      "sourceRow": 8
     },
     {
       "date": "2026-11-01",
@@ -439,7 +534,7 @@
       "endsAt": "2026-11-01T21:00:00+01:00",
       "start": "13:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -450,7 +545,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 41
+      "sourceRow": 18
     },
     {
       "date": "2026-11-02",
@@ -460,9 +555,9 @@
       "end": "17:30",
       "title": "Schnupperrollen",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": false,
@@ -470,7 +565,7 @@
       "note": "Anmeldung nötig",
       "url": "https://www.gleis-d.de/schnupperrollen",
       "sourceSheet": "Schnupperrollen",
-      "sourceRow": 18
+      "sourceRow": 9
     },
     {
       "date": "2026-11-03",
@@ -478,7 +573,7 @@
       "endsAt": "2026-11-03T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -489,7 +584,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 42
+      "sourceRow": 19
     },
     {
       "date": "2026-11-04",
@@ -497,7 +592,7 @@
       "endsAt": "2026-11-04T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -508,7 +603,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 43
+      "sourceRow": 20
     },
     {
       "date": "2026-11-05",
@@ -518,16 +613,16 @@
       "end": "21:00",
       "title": "Bikes Only",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 27
+      "sourceRow": 11
     },
     {
       "date": "2026-11-06",
@@ -535,7 +630,7 @@
       "endsAt": "2026-11-06T18:00:00+01:00",
       "start": "15:00",
       "end": "18:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -546,7 +641,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 44
+      "sourceRow": 21
     },
     {
       "date": "2026-11-06",
@@ -556,16 +651,16 @@
       "end": "22:00",
       "title": "Ü16 Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 28
+      "sourceRow": 12
     },
     {
       "date": "2026-11-07",
@@ -573,7 +668,7 @@
       "endsAt": "2026-11-07T22:00:00+01:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -584,7 +679,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 45
+      "sourceRow": 22
     },
     {
       "date": "2026-11-08",
@@ -592,7 +687,7 @@
       "endsAt": "2026-11-08T21:00:00+01:00",
       "start": "13:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -603,7 +698,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 46
+      "sourceRow": 23
     },
     {
       "date": "2026-11-09",
@@ -613,9 +708,9 @@
       "end": "17:30",
       "title": "Schnupperrollen",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": false,
@@ -623,7 +718,7 @@
       "note": "Anmeldung nötig",
       "url": "https://www.gleis-d.de/schnupperrollen",
       "sourceSheet": "Schnupperrollen",
-      "sourceRow": 19
+      "sourceRow": 10
     },
     {
       "date": "2026-11-10",
@@ -631,7 +726,7 @@
       "endsAt": "2026-11-10T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -642,7 +737,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 47
+      "sourceRow": 24
     },
     {
       "date": "2026-11-11",
@@ -650,7 +745,7 @@
       "endsAt": "2026-11-11T21:00:00+01:00",
       "start": "15:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -661,7 +756,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 48
+      "sourceRow": 25
     },
     {
       "date": "2026-11-12",
@@ -671,16 +766,16 @@
       "end": "21:00",
       "title": "FLINTA* Only",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 29
+      "sourceRow": 13
     },
     {
       "date": "2026-11-13",
@@ -688,7 +783,7 @@
       "endsAt": "2026-11-13T18:00:00+01:00",
       "start": "15:00",
       "end": "18:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -699,7 +794,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 49
+      "sourceRow": 26
     },
     {
       "date": "2026-11-13",
@@ -709,16 +804,16 @@
       "end": "22:00",
       "title": "Ü16 Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Session",
-      "sourceRow": 30
+      "sourceRow": 14
     },
     {
       "date": "2026-11-14",
@@ -726,7 +821,7 @@
       "endsAt": "2026-11-14T22:00:00+01:00",
       "start": "13:00",
       "end": "22:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -737,7 +832,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 50
+      "sourceRow": 27
     },
     {
       "date": "2026-11-14",
@@ -747,9 +842,9 @@
       "end": "24:00",
       "title": "Mitternachtssport",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session"
+        "Sessions"
       ],
       "statusRelevant": true,
       "highlight": false,
@@ -766,9 +861,9 @@
       "end": "11:00",
       "title": "Kids Session",
       "status": "aktiv",
-      "category": "Session",
+      "category": "Sessions",
       "categories": [
-        "Session",
+        "Sessions",
         "Kinder"
       ],
       "statusRelevant": true,
@@ -776,7 +871,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/programm",
       "sourceSheet": "Kids Session",
-      "sourceRow": 13
+      "sourceRow": 9
     },
     {
       "date": "2026-11-15",
@@ -784,7 +879,7 @@
       "endsAt": "2026-11-15T21:00:00+01:00",
       "start": "13:00",
       "end": "21:00",
-      "title": "Offener Betrieb",
+      "title": "Skatehalle geöffnet",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -795,7 +890,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 51
+      "sourceRow": 28
     }
   ],
   "warnings": []
