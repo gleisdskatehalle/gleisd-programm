@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T15:58:45+02:00",
+  "generatedAt": "2026-10-19T09:52:01+02:00",
   "timezone": "Europe/Berlin",
   "categories": [
     "Öffnungszeiten",
@@ -23,31 +23,11 @@
   ],
   "todayItems": [
     {
-      "date": "2026-10-18",
-      "startsAt": "2026-10-18T09:00:00+02:00",
-      "endsAt": "2026-10-18T11:00:00+02:00",
-      "start": "09:00",
-      "end": "11:00",
-      "title": "Kids Session",
-      "status": "aktiv",
-      "category": "Sessions",
-      "categories": [
-        "Sessions",
-        "Kinder"
-      ],
-      "statusRelevant": true,
-      "highlight": false,
-      "note": "",
-      "url": "https://www.gleis-d.de/programm",
-      "sourceSheet": "Kids Session",
-      "sourceRow": 7
-    },
-    {
-      "date": "2026-10-18",
-      "startsAt": "2026-10-18T14:00:00+02:00",
-      "endsAt": "2026-10-18T22:00:00+02:00",
+      "date": "2026-10-19",
+      "startsAt": "2026-10-19T14:00:00+02:00",
+      "endsAt": "2026-10-19T19:00:00+02:00",
       "start": "14:00",
-      "end": "22:00",
+      "end": "19:00",
       "title": "Offen für alle",
       "status": "aktiv",
       "category": "Öffnungszeiten",
@@ -59,59 +39,19 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 8
+      "sourceRow": 9
     }
   ],
-  "currentItems": [
-    {
-      "date": "2026-10-18",
-      "startsAt": "2026-10-18T14:00:00+02:00",
-      "endsAt": "2026-10-18T22:00:00+02:00",
-      "start": "14:00",
-      "end": "22:00",
-      "title": "Offen für alle",
-      "status": "aktiv",
-      "category": "Öffnungszeiten",
-      "categories": [
-        "Öffnungszeiten"
-      ],
-      "statusRelevant": true,
-      "highlight": false,
-      "note": "",
-      "url": "https://www.gleis-d.de/",
-      "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 8
-    }
-  ],
+  "currentItems": [],
   "upcomingHighlights": [],
   "cancelledItems": [],
   "allItems": [
     {
-      "date": "2026-10-18",
-      "startsAt": "2026-10-18T09:00:00+02:00",
-      "endsAt": "2026-10-18T11:00:00+02:00",
-      "start": "09:00",
-      "end": "11:00",
-      "title": "Kids Session",
-      "status": "aktiv",
-      "category": "Sessions",
-      "categories": [
-        "Sessions",
-        "Kinder"
-      ],
-      "statusRelevant": true,
-      "highlight": false,
-      "note": "",
-      "url": "https://www.gleis-d.de/programm",
-      "sourceSheet": "Kids Session",
-      "sourceRow": 7
-    },
-    {
-      "date": "2026-10-18",
-      "startsAt": "2026-10-18T14:00:00+02:00",
-      "endsAt": "2026-10-18T22:00:00+02:00",
+      "date": "2026-10-19",
+      "startsAt": "2026-10-19T14:00:00+02:00",
+      "endsAt": "2026-10-19T19:00:00+02:00",
       "start": "14:00",
-      "end": "22:00",
+      "end": "19:00",
       "title": "Offen für alle",
       "status": "aktiv",
       "category": "Öffnungszeiten",
@@ -123,7 +63,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 8
+      "sourceRow": 9
     },
     {
       "date": "2026-10-20",
@@ -142,7 +82,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 9
+      "sourceRow": 10
     },
     {
       "date": "2026-10-21",
@@ -161,7 +101,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 10
+      "sourceRow": 11
     },
     {
       "date": "2026-10-22",
@@ -199,7 +139,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 11
+      "sourceRow": 12
     },
     {
       "date": "2026-10-23",
@@ -237,7 +177,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 12
+      "sourceRow": 13
     },
     {
       "date": "2026-10-25",
@@ -256,7 +196,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 13
+      "sourceRow": 14
     },
     {
       "date": "2026-10-26",
@@ -275,7 +215,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 14
+      "sourceRow": 15
     },
     {
       "date": "2026-10-26",
@@ -314,7 +254,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 15
+      "sourceRow": 16
     },
     {
       "date": "2026-10-28",
@@ -333,7 +273,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 16
+      "sourceRow": 17
     },
     {
       "date": "2026-10-29",
@@ -341,7 +281,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -352,7 +292,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 17
+      "sourceRow": 18
     },
     {
       "date": "2026-10-29",
@@ -390,7 +330,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 18
+      "sourceRow": 19
     },
     {
       "date": "2026-10-30",
@@ -417,7 +357,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -428,7 +368,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 19
+      "sourceRow": 20
     },
     {
       "date": "2026-11-01",
@@ -467,7 +407,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 20
+      "sourceRow": 21
     },
     {
       "date": "2026-11-02",
@@ -475,7 +415,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -486,7 +426,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 21
+      "sourceRow": 22
     },
     {
       "date": "2026-11-02",
@@ -525,7 +465,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 22
+      "sourceRow": 23
     },
     {
       "date": "2026-11-04",
@@ -544,7 +484,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 23
+      "sourceRow": 24
     },
     {
       "date": "2026-11-05",
@@ -552,7 +492,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -563,7 +503,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 24
+      "sourceRow": 25
     },
     {
       "date": "2026-11-05",
@@ -601,7 +541,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 25
+      "sourceRow": 26
     },
     {
       "date": "2026-11-06",
@@ -639,7 +579,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 26
+      "sourceRow": 27
     },
     {
       "date": "2026-11-08",
@@ -658,7 +598,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 27
+      "sourceRow": 28
     },
     {
       "date": "2026-11-09",
@@ -666,7 +606,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -677,7 +617,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 28
+      "sourceRow": 29
     },
     {
       "date": "2026-11-09",
@@ -716,7 +656,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 29
+      "sourceRow": 30
     },
     {
       "date": "2026-11-11",
@@ -735,7 +675,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 30
+      "sourceRow": 31
     },
     {
       "date": "2026-11-12",
@@ -743,7 +683,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -754,7 +694,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 31
+      "sourceRow": 32
     },
     {
       "date": "2026-11-12",
@@ -792,7 +732,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 32
+      "sourceRow": 33
     },
     {
       "date": "2026-11-13",
@@ -830,7 +770,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 33
+      "sourceRow": 34
     },
     {
       "date": "2026-11-14",
@@ -888,7 +828,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 34
+      "sourceRow": 35
     },
     {
       "date": "2026-11-16",
@@ -896,7 +836,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -907,7 +847,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 35
+      "sourceRow": 36
     },
     {
       "date": "2026-11-17",
@@ -926,7 +866,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 36
+      "sourceRow": 37
     },
     {
       "date": "2026-11-18",
@@ -945,7 +885,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 37
+      "sourceRow": 38
     },
     {
       "date": "2026-11-19",
@@ -953,7 +893,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -964,7 +904,7 @@
       "note": "",
       "url": "",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 38
+      "sourceRow": 39
     },
     {
       "date": "2026-11-20",
@@ -983,7 +923,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 39
+      "sourceRow": 40
     },
     {
       "date": "2026-11-20",
@@ -1021,7 +961,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 40
+      "sourceRow": 41
     },
     {
       "date": "2026-11-22",
@@ -1040,7 +980,7 @@
       "note": "",
       "url": "https://www.gleis-d.de/",
       "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 41
+      "sourceRow": 42
     },
     {
       "date": "2026-11-23",
@@ -1048,26 +988,7 @@
       "endsAt": null,
       "start": "",
       "end": "",
-      "title": "Offen für alle",
-      "status": "aktiv",
-      "category": "Öffnungszeiten",
-      "categories": [
-        "Öffnungszeiten"
-      ],
-      "statusRelevant": true,
-      "highlight": false,
-      "note": "",
-      "url": "",
-      "sourceSheet": "Öffnungszeiten",
-      "sourceRow": 42
-    },
-    {
-      "date": "2026-11-24",
-      "startsAt": null,
-      "endsAt": null,
-      "start": "",
-      "end": "",
-      "title": "Offen für alle",
+      "title": "Öffnungszeiten",
       "status": "aktiv",
       "category": "Öffnungszeiten",
       "categories": [
@@ -1079,6 +1000,25 @@
       "url": "",
       "sourceSheet": "Öffnungszeiten",
       "sourceRow": 43
+    },
+    {
+      "date": "2026-11-24",
+      "startsAt": null,
+      "endsAt": null,
+      "start": "",
+      "end": "",
+      "title": "Öffnungszeiten",
+      "status": "aktiv",
+      "category": "Öffnungszeiten",
+      "categories": [
+        "Öffnungszeiten"
+      ],
+      "statusRelevant": true,
+      "highlight": false,
+      "note": "",
+      "url": "",
+      "sourceSheet": "Öffnungszeiten",
+      "sourceRow": 44
     },
     {
       "date": "2026-11-26",
